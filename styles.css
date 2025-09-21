@@ -1,0 +1,23 @@
+html, body { margin:0; padding:0; height:100%; font-family:Arial, sans-serif; overflow:hidden; background:#0b0c10; color:#fff;}
+#canvas-bg { position:fixed; top:0; left:0; width:100%; height:100%; z-index:0; }
+body { display:flex; flex-direction:column; align-items:center; }
+h1 { color:#66fcf1; text-align:center; margin:10px 0; font-size:2em; position:relative; z-index:1;}
+.dashboard { display:flex; gap:15px; padding:10px; flex-wrap:wrap; justify-content:center; z-index:1; position:relative; }
+.card { background:#1f2833; border-radius:15px; padding:15px; min-width:250px; max-width:300px; flex:1 1 250px; text-align:center; position:relative; z-index:1; color:#fff; }
+#hora-box { font-size:2em; font-weight:bold; color:#66fcf1; background:#222831; padding:10px 20px; border-radius:10px; margin-bottom:5px; }
+.bairro-name { font-weight:bold; margin-bottom:5px; display:flex; justify-content:center; align-items:center; gap:5px; color:#fff; }
+.bairro-value { font-size:2em; font-weight:bold; margin-top:5px; color:#f1c40f; }
+#bairro1-status, #bairro2-status { color:#fff; margin-top:5px; }
+#weather { display:flex; flex-direction:column; align-items:center; background:#222831; border-radius:15px; padding:10px; gap:5px; color:#fff; }
+#weather img { width:50px; height:50px; animation: float 3s ease-in-out infinite; }
+#weather-temp { font-size:1.5em; font-weight:bold; color:#66fcf1; }
+#weather-desc { font-size:1em; text-transform:capitalize; color:#fff; }
+#weather-datetime { font-size:0.85em; color:#ccc; }
+@keyframes float { 0%,100%{ transform:translateY(0); } 50%{ transform:translateY(-5px); } }
+canvas.chart-canvas { background:#1f2833; border-radius:15px; max-height:200px; }
+/* Relâmpagos sutis */
+@keyframes lightning {
+  0%, 90%, 100% { opacity:0; }
+  95% { opacity:1; }
+}
+.lightning { position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(to bottom, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 50%); opacity:0; z-index:0; animation: lightning 2s infinite; }

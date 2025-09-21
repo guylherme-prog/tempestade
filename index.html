@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monitoramento Descargas Atmosféricas</title>
+
+  <!-- Chart.js (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="canvas-bg"></canvas>
+  <div class="lightning"></div>
+
+  <h1>Monitoramento Descargas Atmosféricas</h1>
+  <div id="hora-box">--:--:--</div>
+
+  <div class="dashboard">
+    <div class="card" id="bairro1">
+      <div class="bairro-name">José Bonifácio ⚡</div>
+      <div class="bairro-value" id="bairro1-value">-- kA</div>
+      <div id="bairro1-status">Incidência: --</div>
+    </div>
+
+    <div class="card" id="bairro2">
+      <div class="bairro-name">Aldeota 📍</div>
+      <div class="bairro-value" id="bairro2-value">-- kA</div>
+      <div id="bairro2-status">Incidência: --</div>
+    </div>
+
+    <div class="card" id="weather">
+      <img id="weather-icon" src="" alt="Clima">
+      <div id="weather-temp">--°C</div>
+      <div id="weather-desc">Carregando...</div>
+      <div id="weather-datetime"></div>
+    </div>
+
+    <div class="card">
+      <canvas id="potChart" class="chart-canvas"></canvas>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="app.js" defer></script>
+</body>
+</html>
